@@ -1,0 +1,30 @@
+<body>
+<script>
+
+d=0
+arr=new Array(10);s='';
+for(i=0;i<arr.length;i++)
+{
+y=Math.random()*10+10;
+arr[i]=Math.floor(y);
+s=s+' '+arr[i];
+ost=arr[i]%7
+if(ost==0)
+{
+d=arr[i]
+}
+}
+if (d>0)
+{
+str = s+' element kratnii 7='+d;
+alert(str);
+}
+else 
+{
+str = s+' element kratnii 7 ne naiden';
+alert(str);
+}
+
+
+</script>
+</body>
