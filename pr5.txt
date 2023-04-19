@@ -1,0 +1,20 @@
+<head>
+<script>
+function fn()
+{
+
+let array = ['d', '*', 'y'];
+for (i = 0;i<=2;i++)
+{
+if (array[i] == '*')
+{
+alert('found')
+}
+}
+
+}
+</script>
+</head>
+<body>
+<input type='button' value='Button' onclick='fn()'>
+</body>
