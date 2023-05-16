@@ -1,0 +1,25 @@
+<body>
+    <p class="r">Привет мир!</p>
+    <button id="btn">Some Text</button>
+    <script>
+        function switchFontSize(cName,size1,size2,event){            
+            document.querySelectorAll(cName).forEach(item=>{                
+                if (item.style.fontSize==size1){
+                    item.style.fontSize=size2;   
+                    event.target.textContent=`Change to:${size1}`;
+                }
+                else {
+                    item.style.fontSize=size1;                
+                    event.target.textContent=`Change to:${size2}`;                   
+                }            
+            });            
+        }
+        const myBtn=document.getElementById("btn");
+        //добавим событие при нажатии нашей кнопки       
+        myBtn.addEventListener('click', (e)=>switchFontSize(".r","20pt","12pt",e));
+        
+        //запустим один раз... если изначально размер шрифта не задан... для красоты. 
+        myBtn.click();        
+    </script>
+</body>
+</html>

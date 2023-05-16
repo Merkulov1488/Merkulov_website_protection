@@ -1,0 +1,25 @@
+<body>
+<input type="radio" name="raz" value="html">html 
+<input type="radio" name="raz" value="css">css 
+<input type="radio" name="raz" value="js">js 
+<input type="radio" name="raz" value="php">php 
+<p id="text"></p>   
+<script>
+var elem = document.getElementsByTagName('input');
+var p = document.getElementById('text');
+for (var i = 0; i < elem.length; i++) 
+{
+  elem[i].addEventListener('change', func);
+}
+
+function func() 
+{
+  if(this.checked) 
+  {
+    p.innerHTML=this.value;
+  }
+}       
+</script>
+</body>
+</html>
+</html>

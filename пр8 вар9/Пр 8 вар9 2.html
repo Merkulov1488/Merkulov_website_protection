@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Вставка картинки и рамки</title>
+  <style>
+    .framed {
+      border: 2px solid black;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function insertImageAndFrame() 
+    {
+      var headings = document.getElementsByTagName("h1");
+      
+      for (var i = 0; i < headings.length; i++) {
+        var heading = headings[i];
+        var image = document.createElement("img");
+        
+        image.src ="https://memepedia.ru/wp-content/uploads/2023/05/da-poebat-mne-gosling-1.jpg";
+        
+        var frame = document.createElement("div");
+        frame.classList.add("framed");
+        
+        heading.parentNode.insertBefore(frame, heading);
+        frame.appendChild(image);
+        frame.appendChild(heading);
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="insertImageAndFrame()">Добавить картинки и рамки</button>
+  <h1>Заголовок 1</h1>
+  <p>Текст 1</p>
+  <h1>Заголовок 2</h1>
+  <p>Текст 2</p>
+  <h1>Заголовок 3</h1>
+  <p>Текст 3</p>
+</body>
+</html>
