@@ -1,0 +1,46 @@
+<head>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rSbRnYLNznxdWSxy81gh-xwxiitXDez-VtLzuIvpPcl50Rm0b6LynwzUx4WM9uaN_YX9uc5bt2Dy-zwwzJm5E_SCWuFjH7dPw6MfUiDX8x_3rdtAtpF_D6R4_09BQloSnWXDZSHIf86gMw2rqRFGqA" charset="UTF-8"></script><script>
+function vvod()
+{
+s=prompt('Vvedite chislo');
+n=parseInt(s);
+g1='<head><style>body{background-color:';
+g3='}h3{color:'
+;g5='}</style></head>';
+s1='<body><h3>';
+s3='</h3></body>';
+
+n1= n/1000;
+n1= n1-n1%1;
+n2= (n-n1*1000);
+n2= (n2-n2%100)/100;
+n3= n-(n1*1000+n2*100);
+n3= (n3-n3%10)/10;
+n4= n-(n1*1000+n2*100+n3*10);
+
+n12= n1+n2;
+n34= n3+n4;
+
+if(n12==n34)
+{
+s2=' - summa pervih 1 i 2 chisel ravna summe 3 i 4';g2='blue';g4='white';
+}
+if(n12!=n34)
+{
+s2=' - summa pervih 1 i 2 chisel ne ravna summe 3 i 4';g2='red';g4='navy';
+}
+g=g1+g2+g3+g4+g5;
+st=s1+s+s2+s3;
+w=window.open("","","width=200,height=200");
+
+w.document.open();
+w.document.write(g);
+w.document.write(st);
+w.document.close();
+}
+</script>
+</head>
+<body>
+<input type='button' value='START' onclick='vvod()'>
+<input type='button' value='CLOSE' onclick='w.close();'>
+</body>
